@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elivite</title>
+        <style>
+            body {
+                font-family:'Google Sans',sans-serif;
+                background:aliceblue;
+            }
+            #main {
+                display:none;
+            }
+            #login {
+                position: fixed;
+                z-index: 101;
+                top: 28%; 
+                left: 25%; 
+                width: 50%; 
+                background: green;
+                color: white;
+                padding: 5px;
+                border-radius:5px;
+            }
+            #failed {
+                display:none;
+                color:red;
+            }
+            ::placeholder {
+                color:orange;
+            }
+            ::selection {
+                background-color:orange;
+            }
+            .inputform {
+                padding:5px;
+                margin:10px;
+                background:none;
+                border:none;
+                border-bottom:2px solid red;
+                color:orange;
+                font-size:15px;
+                font-family:'Google Sans',sans-serif;
+            }
+            .inputform:focus {
+                border-top:1px solid orange;
+                border-right:1px solid orange;
+                border-left:1px solid orange;
+                outline:0;
+            }
+            .btncon {
+                font-family:'Google sans',sans-serif;
+            }
+            .no {
+                color:white;
+                background:red;
+                padding:15px;
+                border:2px solid darkred;
+                border-radius:5px;
+                font-family:'Google Sans',sans-serif;
+                margin:15px;
+                cursor:pointer;
+            }
+            .yes {
+                color:white;
+                background:lightgreen;
+                padding:15px;
+                border:2px solid green;
+                border-radius:5px;
+                font-family:'Google Sans',sans-serif;
+                margin:15px;
+                cursor:pointer;
+            }
+        </style>
+        <script>
+            function submitfrm() {
+                var name = document.getElementById("prtyname").value;
+                var pswd = document.getElementById("password").value;
+                var date = document.getElementById("date").value;
+                if (name == "eL01brthi4848doDO" && pswd == "aSh29jqX3IDcV" && date == "122419") {
+                    alert("Party name: Elijah's 10th Birthday, Password: **********DcV, Date of Party:  12-24-19");
+                        alert("Loading Elivite");
+                        document.getElementById("main").style.display = "block"
+                        document.getElementById("login").style.display = "none"
+                    document.title = "You are invited to Elijah's 10th Birthday!"
+            }
+                else {
+                    document.getElementById("failed").style.display = "block"
+                }
+            }
+                                   
+        </script>
+    </head>
+    <body align="center" oncontextmenu="return false">
+        <div id="main">
+        <h1>Your invited to Elijah's 10th Brthday!</h1>
+            <p>My brithday will be on 112/24/19</p>
+            <p>At 12:30 we will be going to <a href="http://markettaverndub.com/">Market Tavern</a>. Following lunch, we will go to <a href="https://www.zonelazer.com/">Zone Lazer Tag</a>.</p>
+                <button class="yes" onclick="window.location='mailto:elijb12@gamil.com?Subject=Yes&body=I%20will%20be%20able%20to%20come'">Yes, I will be able to come</button><button class="no" onclick="window.location='mailto:elijb12@gamil.com?Subject=No&body=No%20I%20will%20be%20able%20to%20come'">No, I will not be able to come</button>
+                <br>
+                <img src="photo.png" width="100%"><br><br>
+                <img src="photo1.png" width="100%">
+        </div>
+        <div id="login">
+            <h1>Welcome!</h1>
+            <p>To continue please put in the following information for you ro find the right Elivite! (Tip: the information will be in an email from the host.)</p>
+            <div id="form">
+            <label>Party ID <input type="text" name="partyname" placeholder="Party ID" id="prtyname" class="inputform" title="Party ID"></label>
+                <br>
+                <label>Party Password <input type="password" id="password" placeholder="Party Password" name="partypswd" class="inputform" title="Party Password"></label>
+                <br>
+                <label>Date of party <input type="number" id="date" name="dateofparty" placeholder="Date of party" title="Date of party" class="inputform"></label>
+                <p id="failed">Incorect information.</p>
+                <br>
+                <button onclick="submitfrm()" class="btncon">Confirm</button>
+        </div>
